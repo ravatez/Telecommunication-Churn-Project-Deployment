@@ -1,1 +1,1 @@
-webL sh setup.sh && streamlit run penguins-app.py
+webL sh setup.sh && streamlit run FinalDeployment.py
