@@ -1,1 +1,1 @@
-webL sh setup.sh && streamlit run FinalDeployment.py
+web: sh setup.sh && streamlit run FinalDeployment.py
