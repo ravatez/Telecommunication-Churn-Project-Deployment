@@ -23,8 +23,8 @@ international_calls = st.sidebar.text_input('insert international calls number')
 total_charge = st.sidebar.text_input('insert total charge value')
 
 
-
-df = pd.read_csv('telecommunications_churn.csv')
+#https://github.com/mwaskom/seaborn-data/blob/master/iris.csv
+df = pd.read_csv('https://github.com/ravatez/Telecommunication-Churn-Project-Deployment/blob/main/telecommunications_churn.csv')
 df.drop(['voice_mail_plan','day_charge','evening_charge','night_charge', 'international_charge',
         'account_length','day_calls','night_calls','evening_calls'],axis=1, inplace=True)
 
@@ -79,12 +79,6 @@ if st.button("Predict churn"):
                             international_plan,international_calls,total_charge]])
 #    st.success("The prediction is {}".format(output[0])
     st.write('Customer will churn' if output[0] == 1 else 'Customer is loyal')
-    if output[0] == 0:
-        image = Image.open('happycust.jpeg')
-        st.image(image, caption='Customer is Loyal')
-    else:
-        image = Image.open('sadcust.jpeg')
-        st.image(image, caption='Customer Will Churn')
     
     
     
